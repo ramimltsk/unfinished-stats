@@ -1,0 +1,38 @@
+body{
+    background-color: hsl(232, 19%, 15%);
+    font-family: "Inter", serif;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: hsl(228, 28%, 20%);
+    width: fit-content;
+    padding: 50px;
+}
+
+.stat h1{
+    font-size: 80px;
+    margin: 0;
+}
+
+.today{
+    display: flex;
+    align-items: center;
+}
+
+.stat .top{
+    display: flex;
+    align-items: center;
+}
