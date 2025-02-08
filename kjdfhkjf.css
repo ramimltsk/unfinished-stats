@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: hsl(232, 19%, 15%);
     font-family: "Inter", serif;
 }
@@ -8,15 +11,57 @@ h1 {
     color: white;
 }
 
-.tip {
+.tip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    padding: 50px;
+}
+
+.titletwo{
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    width: 67%;
+}
+
+.switch{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch p{
+    color: white;
+}
+
+.switchbackground{
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    width: 50px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.switchbutton{
+    background-color:hsl(232, 19%, 15%) ;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.main{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
 .title {
     color: white;
-    text-align: start;
 }
 
 .title h1 {
@@ -32,7 +77,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 30px;
-
     max-width: 1800px;
 }
 
@@ -49,8 +93,16 @@ h1 {
 
 }
 
+.stat:hover{
+    background-color:hsl(230, 13%, 43%) ;
+}
+
+.card:hover{
+    background-color:hsl(230, 13%, 43%) ;
+}
+
 .stat h1 {
-    font-size: 80px;
+    font-size: 90px;
     margin: 0;
 }
 
@@ -147,6 +199,6 @@ h1 {
 .title {
     display: flex;
     flex-direction: column;
-
+    
     text-align: start;
 }
