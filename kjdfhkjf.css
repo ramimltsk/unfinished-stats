@@ -1,17 +1,64 @@
+/* #### Dark Theme
+
+- Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%)
+
+#### Light Theme
+
+- White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%) */
+
 body {
+
+    --bg-hover: hsl(230, 13%, 43%);
+
+    --txt-color2: hsl(228, 34%, 66%);
+
+    --txt-color1: hsl(0, 0%, 100%);
+
+    --bg-card: hsl(228, 28%, 20%);
+
+
+    --bg-1: hsl(232, 19%, 15%);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: hsl(232, 19%, 15%);
+    background-color: var(--bg-1);
     font-family: "Inter", serif;
+
 }
+
+
+
+
+body.light {
+
+    --bg-hover: hsl(0, 0%, 77%);
+
+    --txt-color2: hsl(228, 12%, 44%);
+
+    --txt-color1: hsl(230, 17%, 14%);
+
+    --bg-card: hsl(227, 47%, 96%);
+
+
+    --bg-1: hsl(0, 0%, 100%);
+}
+
 
 h1 {
     font-size: 40px;
-    color: white;
+    color: var(--txt-color1);
 }
 
-.tip{
+.tip {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,41 +66,43 @@ h1 {
     padding: 50px;
 }
 
-.titletwo{
+.titletwo {
     padding: 20px;
     display: flex;
     justify-content: start;
     width: 67%;
 }
 
-.switch{
+.switch {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.switch p{
-    color: white;
+.switch p {
+    color: var(--txt-color1);
 }
 
-.switchbackground{
+.switchbackground {
     background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     width: 50px;
     height: 20px;
     display: flex;
     align-items: center;
+    justify-content: start;
     padding: 5px;
     border-radius: 50px;
+    cursor: pointer;
 }
 
-.switchbutton{
-    background-color:hsl(232, 19%, 15%) ;
+.switchbutton {
+    background-color: var(--bg-1);
     border-radius: 50%;
     width: 20px;
     height: 20px;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +110,7 @@ h1 {
 
 
 .title {
-    color: white;
+    color: var(--txt-color1);
 }
 
 .title h1 {
@@ -77,15 +126,17 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 30px;
-    max-width: 1800px;
+    max-width: 1260px;
 }
 
 .stat {
+
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: hsl(228, 28%, 20%);
+    background-color: var(--bg-card);
     padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
@@ -93,12 +144,12 @@ h1 {
 
 }
 
-.stat:hover{
-    background-color:hsl(230, 13%, 43%) ;
+.stat:hover {
+    background-color: var(--bg-hover);
 }
 
-.card:hover{
-    background-color:hsl(230, 13%, 43%) ;
+.card:hover {
+    background-color: var(--bg-hover);
 }
 
 .stat h1 {
@@ -158,14 +209,14 @@ h1 {
 }
 
 .stat-txt {
-    color: hsl(228, 34%, 66%);
+    color: var(--txt-color2);
 }
 
 .card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(228, 28%, 20%);
+    background-color: var(--bg-card);
     padding: 20px;
     border-radius: 5px;
 }
@@ -199,6 +250,10 @@ h1 {
 .title {
     display: flex;
     flex-direction: column;
-    
+
     text-align: start;
+}
+
+.on {
+    justify-content: end;
 }
